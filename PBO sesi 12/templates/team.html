@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Informasi Kelompok</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <h2>📱 Productivity Tracker</h2>
+
+    <a href="/">🏠 Dashboard</a>
+    <a href="/screen_time">📱 Screen Time</a>
+    <a href="/reminder">⏰ Reminder</a>
+    <a href="/tasks">📝 Task Manager</a>
+    <a href="/report">📊 Report</a>
+
+</div>
+
+<div class="main">
+
+    <div class="topbar">
+        <h1>👥 Informasi Kelompok</h1>
+        <p>Anggota Pengembang Productivity Tracker</p>
+    </div>
+
+    <div class="team-grid">
+
+        {% for member in members %}
+
+        <div class="team-card">
+
+            <div class="avatar">
+                👤
+            </div>
+
+            <h2>{{ member.nama }}</h2>
+
+            <p>{{ member.nim }}</p>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+</body>
+</html>

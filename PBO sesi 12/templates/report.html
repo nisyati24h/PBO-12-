@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Productivity Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <h2>📱 Productivity Tracker</h2>
+
+    <a href="/">Dashboard</a>
+    <a href="/tasks">Task Manager</a>
+    <a href="/report">Report</a>
+
+</div>
+
+<div class="main">
+
+    <div class="topbar">
+        <h1>📊 Productivity Report</h1>
+        <p>Riwayat penggunaan screen time harian</p>
+    </div>
+
+    <div class="form-box">
+
+        <h2>Total Screen Time</h2>
+
+        <h1 style="color:#38bdf8;">
+            {{ total_time }} Jam
+        </h1>
+
+    </div>
+
+    <div class="form-box">
+
+        <h2>Riwayat Screen Time</h2>
+
+        <table>
+
+            <tr>
+                <th>Tanggal</th>
+                <th>Durasi</th>
+            </tr>
+
+            {% for item in records %}
+
+            <tr>
+                <td>{{ item.date }}</td>
+                <td>{{ item.hours }} Jam</td>
+            </tr>
+
+            {% endfor %}
+
+        </table>
+
+    </div>
+
+</div>
+
+</body>
+</html>

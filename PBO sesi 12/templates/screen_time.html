@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Screen Time</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="sidebar">
+    <h2>📱 Productivity Tracker</h2>
+
+    <a href="/">🏠 Dashboard</a>
+    <a href="/screen_time">📱 Screen Time</a>
+    <a href="/reminder">⏰ Reminder</a>
+    <a href="/tasks">📝 Task Manager</a>
+    <a href="/report">📊 Report</a>
+</div>
+
+<div class="main">
+
+    <h1>📱 Screen Time Manager</h1>
+
+    <div class="card">
+        <h3>Total Penggunaan</h3>
+        <h2>{{ total_time }} Jam</h2>
+        <p>Batas Harian {{ limit }} Jam</p>
+    </div>
+
+    <div class="form-box">
+
+        <h2>Tambah Screen Time</h2>
+
+        <form action="/add_time" method="POST">
+
+            <input type="date" name="date" required>
+
+            <input
+                type="number"
+                name="hours"
+                placeholder="Jumlah Jam"
+                required>
+
+            <button type="submit">
+                Simpan
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>

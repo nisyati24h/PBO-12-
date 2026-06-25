@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reminder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="sidebar">
+    <h2>📱 Productivity Tracker</h2>
+
+    <a href="/">🏠 Dashboard</a>
+    <a href="/screen_time">📱 Screen Time</a>
+    <a href="/reminder">⏰ Reminder</a>
+    <a href="/tasks">📝 Task Manager</a>
+    <a href="/report">📊 Report</a>
+</div>
+
+<div class="main">
+
+    <h1>⏰ Productivity Reminder</h1>
+
+    {% for reminder in reminders %}
+
+    <div class="card">
+        <h3>{{ reminder }}</h3>
+    </div>
+
+    {% endfor %}
+
+</div>
+
+</body>
+</html>

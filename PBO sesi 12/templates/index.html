@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Productivity Tracker</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <h2>📱 Productivity Tracker</h2>
+
+    <a href="/">🏠 Dashboard</a>
+    <a href="/screen_time">📱 Screen Time</a>
+    <a href="/reminder">⏰ Reminder</a>
+    <a href="/tasks">📝 Task Manager</a>
+    <a href="/report">📊 Report</a>
+
+</div>
+
+<div class="main">
+
+    <!-- TOP BAR -->
+
+    <div class="header-row">
+
+        <div class="topbar">
+            <h1>Welcome, {{ username }}</h1>
+            <p>Kelola produktivitas dan screen time dengan lebih baik</p>
+        </div>
+
+        <a href="/team" class="team-button">
+            👥 Informasi Kelompok
+        </a>
+
+    </div>
+
+    <!-- CARD FITUR -->
+
+    <div class="cards">
+
+        <a href="/screen_time" class="card-link">
+
+            <div class="card">
+
+                <div class="icon">📱</div>
+
+                <h3>Screen Time Manager</h3>
+
+                <h2>{{ screentime }} Jam</h2>
+
+                <p>Batas Harian {{ limit }} Jam</p>
+
+            </div>
+
+        </a>
+
+        <a href="/reminder" class="card-link">
+
+            <div class="card">
+
+                <div class="icon">⏰</div>
+
+                <h3>Productivity Reminder</h3>
+
+                <h2>Aktif</h2>
+
+                <p>Pengingat produktivitas harian</p>
+
+            </div>
+
+        </a>
+
+        <a href="/tasks" class="card-link">
+
+            <div class="card">
+
+                <div class="icon">📝</div>
+
+                <h3>Task Manager</h3>
+
+                <h2>{{ taskcount }}</h2>
+
+                <p>Total Tugas Aktif</p>
+
+            </div>
+
+        </a>
+
+        <a href="/report" class="card-link">
+
+            <div class="card">
+
+                <div class="icon">📊</div>
+
+                <h3>Daily Productivity Report</h3>
+
+                <h2>80%</h2>
+
+                <p>Laporan produktivitas harian</p>
+
+            </div>
+
+        </a>
+
+    </div>
+
+    <!-- RINGKASAN -->
+
+    <div class="dashboard-info">
+
+        <div class="info-box">
+
+            <h2>📌 Ringkasan Hari Ini</h2>
+
+            <p>
+                Total Screen Time :
+                <b>{{ screentime }} Jam</b>
+            </p>
+
+            <p>
+                Total Tugas :
+                <b>{{ taskcount }}</b>
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

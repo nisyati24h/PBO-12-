@@ -1,0 +1,324 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    display:flex;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+    width:260px;
+    height:100vh;
+    background:#111827;
+    padding:30px;
+    position:fixed;
+    left:0;
+    top:0;
+    box-shadow:5px 0 20px rgba(0,0,0,0.3);
+}
+
+.sidebar h2{
+    color:#38bdf8;
+    margin-bottom:40px;
+}
+
+.sidebar a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:14px;
+    margin-bottom:10px;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.sidebar a:hover{
+    background:#2563eb;
+}
+
+/* MAIN */
+
+.main{
+    margin-left:260px;
+    width:100%;
+    padding:40px;
+}
+
+.topbar{
+    margin-bottom:30px;
+}
+
+.topbar h1{
+    color:#38bdf8;
+    font-size:40px;
+}
+
+.topbar p{
+    color:#94a3b8;
+    margin-top:10px;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.card-link{
+    text-decoration:none;
+}
+
+.card{
+    background:#1e293b;
+    border-radius:20px;
+    padding:30px;
+    transition:0.3s;
+    min-height:220px;
+    box-shadow:0 0 20px rgba(56,189,248,0.15);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 30px rgba(56,189,248,0.35);
+}
+
+.icon{
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+.card h3{
+    color:#cbd5e1;
+    margin-bottom:15px;
+}
+
+.card h2{
+    color:#38bdf8;
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#94a3b8;
+}
+
+/* INFO BOX */
+
+.dashboard-info{
+    margin-top:35px;
+}
+
+.info-box{
+    background:#1e293b;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 0 20px rgba(56,189,248,0.15);
+}
+
+.info-box h2{
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+.info-box p{
+    margin-bottom:10px;
+    color:#cbd5e1;
+}
+
+/* FORM */
+
+.form-box{
+    background:#1e293b;
+    padding:25px;
+    border-radius:20px;
+    margin-top:30px;
+    box-shadow:0 0 20px rgba(56,189,248,0.15);
+}
+
+.form-box h2{
+    margin-bottom:20px;
+    color:#38bdf8;
+}
+
+.form-box input{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:none;
+    border-radius:10px;
+    background:#334155;
+    color:white;
+}
+
+.form-box button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+}
+
+.form-box button:hover{
+    background:#1d4ed8;
+}
+
+/* TABLE */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+th{
+    background:#2563eb;
+    padding:15px;
+}
+
+td{
+    padding:15px;
+    background:#1e293b;
+    border-bottom:1px solid #334155;
+}
+
+tr:hover td{
+    background:#334155;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .sidebar{
+        display:none;
+    }
+
+    .main{
+        margin-left:0;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+}
+/* HEADER */
+
+.header-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin-bottom:30px;
+}
+
+/* INFORMASI KELOMPOK */
+
+.team-button{
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:12px;
+    transition:0.3s;
+    font-weight:600;
+}
+
+.team-button:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+/* HALAMAN KELOMPOK */
+
+.team-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+    margin-top:30px;
+}
+
+.team-card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 0 20px rgba(56,189,248,0.15);
+}
+
+.team-card img{
+    width:150px;
+    height:150px;
+    object-fit:cover;
+    border-radius:50%;
+    border:4px solid #38bdf8;
+    margin-bottom:20px;
+}
+
+.team-card h2{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+.team-card p{
+    color:#cbd5e1;
+}
+/* ========================= */
+/* TEAM PAGE */
+/* ========================= */
+
+.team-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    margin-top:30px;
+}
+
+.team-card{
+    background:#111827;
+    border:1px solid #334155;
+    border-radius:25px;
+    padding:35px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.team-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px rgba(56,189,248,0.2);
+}
+
+.avatar{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:rgba(168,85,247,0.15);
+    border:2px solid #a855f7;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:40px;
+    margin:auto;
+    margin-bottom:20px;
+}
+
+.team-card h2{
+    color:white;
+    margin-bottom:10px;
+    font-size:24px;
+}
+
+.team-card p{
+    color:#94a3b8;
+    font-size:18px;
+}
